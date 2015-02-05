@@ -1,0 +1,108 @@
+/**
+ * Structure of a forumanonymous post
+ * div.forumanonymouspost(.read.unread)
+ *     div.header.row
+ *         div.picture.left
+ *         div.topic(.starter)
+ *             div.subject
+ *             div.author
+ *     div.row
+ *         div.side.left
+ *         div.content-mask
+ *             div.content
+ *                 div.attachments
+ *                 div.posting(.shortenedpost|.fullpost)
+ *                     // message
+ *                 div.attachedimages
+ *                     // attachedimages
+ *     div.row
+ *         div.left
+ *         div.options
+ *             div.commands
+ *             div.forumanonymous-post-rating
+ *             div.link
+ *             div.footer
+ */
+
+.forumanonymouspost {display: block;position:relative;margin:0 0 1em 0;padding:0;border:1px solid #000;max-width:100%;}
+.forumanonymouspost .row {width:100%;position:relative;}
+.forumanonymouspost .row .left {float:left;width: 43px;overflow:hidden;}
+.forumanonymouspost .row .left .grouppictures a {text-align:center;display:block;margin:6px 2px 0 2px;}
+.forumanonymouspost .row .left .grouppicture {width:20px;height:20px;}
+.forumanonymouspost .row .topic,
+.forumanonymouspost .row .content-mask,
+.forumanonymouspost .row .options {margin-left:43px;}
+.forumanonymouspost .picture img {margin:4px;}
+.forumanonymouspost .options .commands,
+.forumanonymouspost .content .attachments,
+.forumanonymouspost .options .footer,
+.forumanonymouspost .options .link {text-align:right;}
+.forumanonymouspost .options .forumanonymous-post-rating {float:left;}
+.forumanonymouspost .content .posting {overflow:auto;max-width:100%;}
+.forumanonymouspost .content .attachedimages img {max-width:100%;}
+
+.dir-rtl .forumanonymouspost .row .topic,
+.dir-rtl .forumanonymouspost .row .content-mask,
+.dir-rtl .forumanonymouspost .row .options {margin-right:43px;margin-left:0;}
+.dir-rtl .forumanonymouspost .row .left {float:right;}
+.dir-rtl.path-mod-forumanonymous .indent {margin-right:30px;margin-left:0;}
+
+.path-mod-forumanonymous .forumanonymousolddiscuss,
+#page-mod-forumanonymous-search .c0 {text-align:right;}
+.path-mod-forumanonymous .indent {margin-left: 30px;}
+.path-mod-forumanonymous .forumanonymousheaderlist {width: 100%;border-width:1px;border-style:solid;border-collapse:separate;margin-top: 10px;}
+.path-mod-forumanonymous .forumanonymousheaderlist td {border-width:1px 0px 0px 1px;border-style:solid;}
+.path-mod-forumanonymous .forumanonymousheaderlist th.header.replies .iconsmall { margin: 0 .3em;}
+.path-mod-forumanonymous .forumanonymousheaderlist .picture {width: 35px;}
+.path-mod-forumanonymous .forumanonymousheaderlist .discussion .starter {vertical-align: middle;}
+.path-mod-forumanonymous .forumanonymousheaderlist .discussion .lastpost {white-space: nowrap;text-align: right;}
+.path-mod-forumanonymous .forumanonymousheaderlist .replies,
+.path-mod-forumanonymous .forumanonymousheaderlist .discussion .author {white-space: nowrap;}
+
+/** Styles for subscribers.php */
+#page-mod-forumanonymous-subscribers .subscriberdiv,
+#page-mod-forumanonymous-subscribers .subscribertable {width:100%;vertical-align:top;}
+#page-mod-forumanonymous-subscribers .subscribertable tr td {vertical-align:top;}
+#page-mod-forumanonymous-subscribers .subscribertable tr td.actions {width:16%;padding-top:3em;}
+#page-mod-forumanonymous-subscribers .subscribertable tr td.actions .actionbutton {margin:0.3em 0;padding:0.5em 0;width:100%;}
+#page-mod-forumanonymous-subscribers .subscribertable tr td.existing,
+#page-mod-forumanonymous-subscribers .subscribertable tr td.potential {width:42%;}
+
+/** Styles for discuss.php **/
+#page-mod-forumanonymous-discuss .discussioncontrols {width:100%;margin:5px;}
+#page-mod-forumanonymous-discuss .discussioncontrols .discussioncontrol {width:33%;float:left;}
+#page-mod-forumanonymous-discuss .discussioncontrol.exporttoportfolio {text-align:left;}
+#page-mod-forumanonymous-discuss .discussioncontrol.displaymode {text-align:center;}
+#page-mod-forumanonymous-discuss .discussioncontrol.movediscussion {float:right;width:auto;text-align:right;padding-right:10px;}
+#page-mod-forumanonymous-discuss .discussioncontrol.movediscussion .movediscussionoption {}
+
+/** Styles for view.php **/
+#page-mod-forumanonymous-view .forumanonymousaddnew {margin-bottom: 20px;}
+#page-mod-forumanonymous-view .groupmenu {float: left;text-align:left;white-space: nowrap;}
+#page-mod-forumanonymous-index .subscription,
+#page-mod-forumanonymous-view .subscription {float: right;text-align:right;white-space: nowrap;margin: 5px 0;}
+
+/** Styles for search.php */
+#page-mod-forumanonymous-search .introcontent {padding: 15px;font-weight:bold;}
+
+#page-mod-forumanonymous-index .unread a:first-child,
+#page-mod-forumanonymous-view .unread a:first-child {padding-right: 10px;}
+#page-mod-forumanonymous-index .unread img,
+#page-mod-forumanonymous-view .unread img {margin-left: 5px;}
+#page-mod-forumanonymous-view .unread img {margin-left: 5px;}
+.dir-rtl#page-mod-forumanonymous-view .unread img {margin-right: 5px; margin-left: 0; }
+
+/** Unknown Styles ??? */
+#email .unsubscribelink {margin-top:20px;}
+
+/* forumanonymouspost unread
+-------------------------*/
+#page-mod-forumanonymous-view .unread,
+.forumanonymouspost.unread .row.header,
+.path-course-view .unread,
+span.unread {
+    background-color: #FFD;
+}
+.forumanonymouspost.unread .row.header {
+    border-bottom: 1px solid #DDD;
+}
